@@ -5,6 +5,7 @@ export default interface Movie {
   overview: string;
   vote_count: number;
   vote_average: number;
-  adult: boolean;
+  language: number;
   genre_ids: number[];
+  backdrop_path: string;
 }

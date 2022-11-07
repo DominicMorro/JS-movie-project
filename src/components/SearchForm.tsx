@@ -7,7 +7,7 @@ interface Props {
 const SearchForm = ({ setTerm }: Props) => {
   const [searchTerm, setSerachTerm] = useState("");
   const submitHandler = (e: FormEvent) => {
-    e.preventDefault;
+    e.preventDefault();
     setTerm(searchTerm);
   };
   return (
