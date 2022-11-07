@@ -34,7 +34,7 @@ export const getMovieByTitle = (
 export const getMovieByCriteria = (
   withGenres: string,
   average_vote: number,
-  adult: boolean
+  language: string
 ): Promise<CriteriaResponse> => {
   return axios
     .get(`https://api.themoviedb.org/3/discover/movie`, {
@@ -42,7 +42,7 @@ export const getMovieByCriteria = (
         api_key: apiKey,
         with_genres: withGenres,
         "vote_average.gte": average_vote,
-        include_adult: adult,
+        with_original_language: language,
       },
     })
     .then((res) => res.data)
