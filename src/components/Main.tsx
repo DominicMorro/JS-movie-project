@@ -3,6 +3,7 @@ import Movie from "../models/Movie";
 import {
   getMovieByCriteria,
   getMovieByTitle,
+  getTrendingMovies,
 } from "../services/movieApiService";
 import CriteriaForm from "./CriteriaForm";
 import "./Main.css";
@@ -34,6 +35,8 @@ const Main = () => {
   useEffect(() => {
     if (searchMovie !== "") {
       getMovieByTitle(searchMovie).then((res) => setMovies(res.results));
+    } else {
+      getTrendingMovies().then((res) => setMovies(res.results));
     }
     console.log(movies);
   }, [searchMovie]);

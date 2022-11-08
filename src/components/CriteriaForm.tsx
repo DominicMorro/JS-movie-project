@@ -58,6 +58,7 @@ const CriteriaForm = ({ chooseGenre, chooseRating, chooseLanguage }: Props) => {
         name="rating"
         min="0"
         max="10"
+        step="0.5"
         value={rating}
         onChange={(e) => {
           setRating(e.target.value);

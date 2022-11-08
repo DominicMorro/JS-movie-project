@@ -13,6 +13,7 @@ import {
   getTrendingMovies,
 } from "./services/movieApiService";
 import Main from "./components/Main";
+import Details from "./components/Details";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Main />} />
           <Route path="*" element={<Navigate to={"/home"} />} />
+          <Route path="/details/:id" element={<Details />} />
         </Routes>
       </Router>
     </div>

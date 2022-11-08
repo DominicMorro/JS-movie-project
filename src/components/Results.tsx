@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Movie from "../models/Movie";
 import "./Results.css";
 interface Props {
@@ -9,12 +10,19 @@ const Results = ({ oneMovie }: Props) => {
 
   return (
     <li className="Results">
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
-        alt={oneMovie.original_title}
-      />
+      {/* <img
+        src={`https://image.tmdb.org/t/p/w500/${oneMovie.backdrop_path}`}
+        alt={oneMovie.backdrop_path}
+      /> */}
+      <Link to={`/details/${oneMovie.id}`}>
+        <img
+          src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
+          alt={oneMovie.original_title}
+        />
+      </Link>
+
       <h3>{oneMovie.original_title}</h3>
-      <p>{oneMovie.vote_average}</p>
+      <p>{oneMovie.vote_average.toFixed(1)}</p>
     </li>
   );
 };
