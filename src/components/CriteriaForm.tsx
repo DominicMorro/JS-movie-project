@@ -23,7 +23,7 @@ const CriteriaForm = ({ chooseGenre, chooseRating, chooseLanguage }: Props) => {
 
   return (
     <form className="CriteriaForm" onSubmit={criteriaSubmitHandler}>
-      <label htmlFor="genre">Genre</label>
+      <label htmlFor="genre">Genre:</label>
       <select
         name="genre"
         id="genre"
@@ -51,7 +51,7 @@ const CriteriaForm = ({ chooseGenre, chooseRating, chooseLanguage }: Props) => {
         <option value="10752">War</option>
         <option value="37">Western</option>
       </select>
-      <label htmlFor="rating">Average Rating</label>
+      <label htmlFor="rating">Average Rating:</label>
       <input
         type="range"
         id="rating"

@@ -21,6 +21,7 @@ p {
   margin: 4px;
   justify-content: space-around;
   padding-top: 3px;
+  align-items: center;
 }
 
 .Main {
