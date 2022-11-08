@@ -63,6 +63,7 @@ const CriteriaForm = ({ chooseGenre, chooseRating, chooseLanguage }: Props) => {
           setRating(e.target.value);
         }}
       />
+      <p>{rating}</p>
       <select
         name="language"
         id="language"

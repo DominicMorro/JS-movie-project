@@ -32,9 +32,9 @@ export const getMovieByTitle = (
 };
 
 export const getMovieByCriteria = (
-  withGenres: string,
-  average_vote: number,
-  language: string
+  withGenres?: string,
+  average_vote?: number,
+  language?: string
 ): Promise<CriteriaResponse> => {
   return axios
     .get(`https://api.themoviedb.org/3/discover/movie`, {
