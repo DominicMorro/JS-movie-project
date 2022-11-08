@@ -1,0 +1,38 @@
+.Header {
+  background-image: linear-gradient(black, #700b97);
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.Header img {
+  height: 100px;
+  width: 100px;
+}
+
+.Header .webTitle {
+  right: 50%;
+  transform: translate(-50%);
+}
+
+.Header .logoDiv {
+  display: flex;
+  align-items: center;
+}
+
+.Header .navDiv {
+  display: flex;
+}
+
+.Header .watchlistPage,
+.homePage {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: silver;
+  text-decoration: none;
+}
+
+.Header h1 {
+  -webkit-text-stroke: 0.1px silver;
+  -webkit-text-fill-color: black;
+  font-size: 60px;
+}

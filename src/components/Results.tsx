@@ -14,10 +14,6 @@ const Results = ({ oneMovie }: Props) => {
 
   return (
     <li className="Results">
-      {/* <img
-        src={`https://image.tmdb.org/t/p/w500/${oneMovie.backdrop_path}`}
-        alt={oneMovie.backdrop_path}
-      /> */}
       <Link to={`/details/${oneMovie.id}`}>
         <img
           src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
