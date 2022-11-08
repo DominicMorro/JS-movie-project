@@ -4,14 +4,20 @@
   padding-bottom: 5px;
 }
 
+.Header .leftCamera {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 .Header img {
   height: 100px;
   width: 100px;
+  padding: 15px 15px 0 15px;
 }
 
-.Header .webTitle {
-  right: 50%;
-  transform: translate(-50%);
+.Header .logoDiv {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .Header .logoDiv {
@@ -21,18 +27,27 @@
 
 .Header .navDiv {
   display: flex;
+  justify-content: center;
 }
 
 .Header .watchlistPage,
 .homePage {
-  padding: 5px;
-  border-radius: 5px;
+  margin: 5px;
+}
+
+.Header .watchlistPage,
+.homePage {
+  width: 50px;
+  padding: 8px;
+  border-radius: 20px;
   background-color: silver;
   text-decoration: none;
+  text-align: center;
 }
 
 .Header h1 {
   -webkit-text-stroke: 0.1px silver;
   -webkit-text-fill-color: black;
   font-size: 60px;
+  margin: 0;
 }

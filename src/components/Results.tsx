@@ -14,34 +14,36 @@ const Results = ({ oneMovie }: Props) => {
 
   return (
     <li className="Results">
-      <Link to={`/details/${oneMovie.id}`}>
-        <img
-          src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
-          alt={oneMovie.original_title}
-        />
-      </Link>
+      <div className="movieTemplate">
+        <Link to={`/details/${oneMovie.id}`}>
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
+            alt={oneMovie.original_title}
+          />
+        </Link>
 
-      <h3 className="movieTitle">{oneMovie.original_title}</h3>
-      <p className="movieRating">{oneMovie.vote_average.toFixed(1)}</p>
-      {!isFav(oneMovie.id) ? (
-        <button
-          className="addFav"
-          onClick={() => {
-            addFavorite(oneMovie);
-          }}
-        >
-          &hearts;
-        </button>
-      ) : (
-        <button
-          className="fav"
-          onClick={() => {
-            deleteFavorite(oneMovie.id);
-          }}
-        >
-          &#9940;
-        </button>
-      )}
+        <h3 className="movieTitle">{oneMovie.original_title}</h3>
+        <p className="movieRating">{oneMovie.vote_average.toFixed(1)}</p>
+        {!isFav(oneMovie.id) ? (
+          <button
+            className="addFav"
+            onClick={() => {
+              addFavorite(oneMovie);
+            }}
+          >
+            &hearts;
+          </button>
+        ) : (
+          <button
+            className="fav"
+            onClick={() => {
+              deleteFavorite(oneMovie.id);
+            }}
+          >
+            &#9940;
+          </button>
+        )}
+      </div>
     </li>
   );
 };

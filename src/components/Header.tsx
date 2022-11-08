@@ -6,8 +6,9 @@ const Header = () => {
   return (
     <header className="Header">
       <div className="logoDiv">
-        <img src={filmCamera} alt="" />
+        <img className="leftCamera" src={filmCamera} alt="" />
         <h1 className="webTitle">MovieBuffs</h1>
+        <img className="rightCamera" src={filmCamera} alt="" />
       </div>
       <div className="navDiv">
         <Link className="watchlistPage" to="/favorites">

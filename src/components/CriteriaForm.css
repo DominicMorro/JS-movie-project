@@ -1,0 +1,16 @@
+.CriteriaForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.CriteriaForm p {
+  padding: 5px;
+  border: 1px solid white;
+  align-items: center;
+  color: green;
+}
+
+.CriteriaForm .red {
+  color: red;
+}
