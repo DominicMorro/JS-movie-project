@@ -14,15 +14,19 @@ import {
 } from "./services/movieApiService";
 import Main from "./components/Main";
 import Details from "./components/Details";
+import Favorites from "./components/Favorites";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Routes>
           <Route path="/home" element={<Main />} />
           <Route path="*" element={<Navigate to={"/home"} />} />
           <Route path="/details/:id" element={<Details />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </Router>
     </div>

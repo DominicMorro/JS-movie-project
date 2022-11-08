@@ -6,6 +6,7 @@ import {
   getTrendingMovies,
 } from "../services/movieApiService";
 import CriteriaForm from "./CriteriaForm";
+import Favorites from "./Favorites";
 import "./Main.css";
 import ResultList from "./ResultList";
 import SearchForm from "./SearchForm";
@@ -50,7 +51,9 @@ const Main = () => {
   }, [searchGenres, searchRating, language]);
   return (
     <div className="Main">
-      <button onClick={switchForm}>{buttonText}</button>
+      <button className="switchFormBtn" onClick={switchForm}>
+        {buttonText}
+      </button>
       {!showCriteria ? (
         <SearchForm setTerm={setSearchMovie} />
       ) : (
@@ -61,6 +64,7 @@ const Main = () => {
         />
       )}
       <ResultList movies={movies} />
+      <Favorites />
     </div>
   );
 };

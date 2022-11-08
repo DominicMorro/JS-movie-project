@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import FavoritesContext from "../context/FavoritesContext";
-import "./FavoritesContext.css";
+import "./Favorites.css";
 import Results from "./Results";
 
 const Favorites = () => {
@@ -13,6 +13,5 @@ const Favorites = () => {
     </ul>
   );
 };
-console.log(Favorites);
 
 export default Favorites;

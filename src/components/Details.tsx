@@ -15,8 +15,12 @@ const Details = () => {
 
   return (
     <div className="Details">
-      {movie ? <Results oneMovie={movie} /> : <p>loading...</p>}
-      <p>{movie?.overview}</p>
+      {movie ? (
+        <Results oneMovie={movie} />
+      ) : (
+        <p className="pageLoading">loading...</p>
+      )}
+      <p className="movieOverview">{movie?.overview}</p>
     </div>
   );
 };

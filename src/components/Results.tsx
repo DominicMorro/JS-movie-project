@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import FavoritesContext from "../context/FavoritesContext";
 import Movie from "../models/Movie";
+import Favorites from "./Favorites";
 import "./Results.css";
 interface Props {
   oneMovie: Movie;
 }
 
 const Results = ({ oneMovie }: Props) => {
+  const { addFavorite, isFav, deleteFavorite } = useContext(FavoritesContext);
   console.log(oneMovie.poster_path);
 
   return (
@@ -21,9 +25,27 @@ const Results = ({ oneMovie }: Props) => {
         />
       </Link>
 
-      <h3>{oneMovie.original_title}</h3>
-      <p>{oneMovie.vote_average.toFixed(1)}</p>
-      <button>&hearts;</button>
+      <h3 className="movieTitle">{oneMovie.original_title}</h3>
+      <p className="movieRating">{oneMovie.vote_average.toFixed(1)}</p>
+      {!isFav(oneMovie.id) ? (
+        <button
+          className="addFav"
+          onClick={() => {
+            addFavorite(oneMovie);
+          }}
+        >
+          &hearts;
+        </button>
+      ) : (
+        <button
+          className="fav"
+          onClick={() => {
+            deleteFavorite(oneMovie.id);
+          }}
+        >
+          &#9940;
+        </button>
+      )}
     </li>
   );
 };
