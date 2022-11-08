@@ -1,7 +1,18 @@
+import { useContext } from "react";
+import FavoritesContext from "../context/FavoritesContext";
 import "./FavoritesContext.css";
+import Results from "./Results";
 
-const FavoritesContext = () => {
-  return <div className="FavoritesContext">FavoritesContext works</div>;
+const Favorites = () => {
+  const { favorites } = useContext(FavoritesContext);
+  return (
+    <ul className="Favorites">
+      {favorites.map((fav) => (
+        <Results key={fav.id} oneMovie={fav} />
+      ))}
+    </ul>
+  );
 };
+console.log(Favorites);
 
-export default FavoritesContext;
+export default Favorites;

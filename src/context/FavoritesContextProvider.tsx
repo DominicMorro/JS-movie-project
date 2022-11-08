@@ -1,7 +1,6 @@
 import { ReactNode, useState } from "react";
-import FavoritesContext from "../components/Favorites";
+import FavoritesContext from "./FavoritesContext";
 import Movie from "../models/Movie";
-import "./FavoritesContextProvider.css";
 
 interface Props {
   children: ReactNode;
@@ -9,6 +8,7 @@ interface Props {
 
 const FavoritesContextProvider = ({ children }: Props) => {
   const [favorites, setFavorites] = useState<Movie[]>([]);
+  console.log(favorites);
 
   const addFavorite = (movie: Movie) => {
     setFavorites((prev) => [...prev, movie]);
