@@ -16,6 +16,7 @@ const Details = () => {
   return (
     <div className="Details">
       {movie ? <Results oneMovie={movie} /> : <p>loading...</p>}
+      <p>{movie?.overview}</p>
     </div>
   );
 };

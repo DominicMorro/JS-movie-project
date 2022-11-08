@@ -23,6 +23,7 @@ const Results = ({ oneMovie }: Props) => {
 
       <h3>{oneMovie.original_title}</h3>
       <p>{oneMovie.vote_average.toFixed(1)}</p>
+      <button>&hearts;</button>
     </li>
   );
 };
