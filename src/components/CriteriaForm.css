@@ -1,21 +1,86 @@
 .CriteriaForm {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   align-items: center;
+  flex-direction: column;
+}
+
+.CriteriaForm label {
+  font-size: 20px;
+}
+.CriteriaForm .genreLabel {
+  grid-column: 1 / span 1;
+}
+.CriteriaForm .genreInput {
+  grid-column: 2 / span 1;
+}
+
+.CriteriaForm .ratingLabel {
+  grid-row: 2 / span 1;
+}
+
+.CriteriaForm .ratingSlider {
+  grid-row: 2 / span 1;
+}
+
+.CriteriaForm .ratingBar {
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.CriteriaForm .language {
+  grid-row: 3 / span 1;
+}
+
+.CriteriaForm .languageInput {
+  grid-row: 3 / span 1;
+}
+
+.CriteriaForm button {
+  grid-row: 2;
+  grid-column: 4;
+  margin-left: 10px;
+  background-color: silver;
+  font-family: "Bebas Neue", cursive;
+  border: 0;
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  font-size: 20px;
+  border: 1px solid black;
 }
 
 .CriteriaForm p {
-  border: 1px solid white;
   align-items: center;
   color: green;
-  width: 23px;
+  width: 35px;
   font-size: 20px;
+  margin: 0;
 }
 
 .CriteriaForm .red {
   color: red;
 }
+.CriteriaForm .ratingBar {
+  width: 50px;
+}
 
-.CriteriaForm .genre .rating {
-  font-size: 50px;
+@media only screen and (min-width: 768px) {
+  .CriteriaForm {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .CriteriaForm .ratingLabel {
+    padding-left: 20px;
+  }
+
+  .CriteriaForm .languageInput {
+    padding-left: 20px;
+  }
+  .CriteriaForm label {
+    font-size: 30px;
+  }
+  .CriteriaForm .language {
+    padding-left: 20px;
+  }
 }

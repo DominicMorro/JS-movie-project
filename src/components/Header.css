@@ -1,5 +1,4 @@
 .Header {
-  background-image: linear-gradient(black, #700b97);
   align-items: center;
   padding-bottom: 5px;
 }
@@ -37,12 +36,19 @@
 
 .Header .watchlistPage,
 .homePage {
-  width: 50px;
-  padding: 8px;
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
   background-color: silver;
   text-decoration: none;
-  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  border: 0;
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  font-size: 20px;
+  border: 1px solid black;
 }
 
 .Header h1 {
@@ -50,4 +56,13 @@
   -webkit-text-fill-color: black;
   font-size: 60px;
   margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .Header .leftCamera {
+    margin-right: 80px;
+  }
+  .Header .rightCamera {
+    margin-left: 80px;
+  }
 }

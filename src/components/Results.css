@@ -1,6 +1,8 @@
 .Results {
   display: flex;
   justify-content: center;
+  width: 550px;
+  text-align: center;
 }
 
 .Results .movieTemplate {
@@ -18,7 +20,7 @@
 }
 
 .Results .movieTemplate p {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .Results .movieTemplate button {
@@ -32,6 +34,7 @@
 
 .Results img {
   border-radius: 15px;
+  background-size: contain;
 }
 
 .Results .progressBar {
@@ -39,7 +42,7 @@
   width: 100px;
   position: relative;
   bottom: 750px;
-  left: 10px;
+  left: 20px;
   /* background-color: black;
   border-radius: 50%; */
 }
@@ -47,4 +50,15 @@
 .Results .poster-percentage {
   position: relative;
   height: 750px;
+  transition: all 200ms linear;
+}
+
+.Results .poster-percentage:hover {
+  transform: scale(0.9);
+}
+
+.Results button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

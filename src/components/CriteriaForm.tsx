@@ -1,6 +1,8 @@
 import { FormEvent, useState } from "react";
 import Movie from "../models/Movie";
 import "./CriteriaForm.css";
+import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 interface Props {
   // setCriteria: (something: Movie[]) => void;
@@ -21,10 +23,15 @@ const CriteriaForm = ({ chooseGenre, chooseRating, chooseLanguage }: Props) => {
     chooseLanguage(language);
   };
 
+  let percentage = +rating * 10;
+
   return (
     <form className="CriteriaForm" onSubmit={criteriaSubmitHandler}>
-      <label htmlFor="genre">Genre:</label>
+      <label className="genreLabel" htmlFor="genre">
+        Genre:
+      </label>
       <select
+        className="genreInput"
         name="genre"
         id="genre"
         onChange={(e) => {
@@ -51,8 +58,11 @@ const CriteriaForm = ({ chooseGenre, chooseRating, chooseLanguage }: Props) => {
         <option value="10752">War</option>
         <option value="37">Western</option>
       </select>
-      <label htmlFor="rating">Average Rating:</label>
+      <label className="ratingLabel" htmlFor="rating">
+        Average Rating:
+      </label>
       <input
+        className="ratingSlider"
         type="range"
         id="rating"
         name="rating"
@@ -64,8 +74,27 @@ const CriteriaForm = ({ chooseGenre, chooseRating, chooseLanguage }: Props) => {
           setRating(e.target.value);
         }}
       />
-      <p className={`${+rating <= 5 ? "red" : ""}`}>{rating}</p>
+      <div className="ratingBar">
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          background={true}
+          backgroundPadding={5}
+          styles={buildStyles({
+            pathColor: "#54B435",
+            textColor: "#ffffff",
+            trailColor: "#C0C0C0",
+            backgroundColor: "#000000",
+            textSize: "30px",
+          })}
+        />
+      </div>
+      {/* <p className={`${+rating <= 5 ? "red" : ""}`}>{rating}</p> */}
+      <label className="language" htmlFor="language">
+        Language:{" "}
+      </label>
       <select
+        className="languageInput"
         name="language"
         id="language"
         onChange={(e) => {

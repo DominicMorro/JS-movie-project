@@ -1,2 +1,7 @@
-.ResultList {
+@media only screen and (min-width: 768px) {
+  .ResultList ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

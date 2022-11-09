@@ -18,16 +18,16 @@ const Main = () => {
   const [searchRating, setSearchRating] = useState("");
   const [language, setLanguage] = useState("");
   const [showCriteria, setShowCriteria] = useState(false);
-  const [buttonText, setButtonText] = useState("Search by Criteria");
+  const [buttonText, setButtonText] = useState("Criteria");
   const switchForm = () => {
     setShowCriteria((prev) => !prev);
     setSearchMovie("");
     setSearchGenres("");
     setSearchRating("");
     setLanguage("");
-    buttonText !== "Search by Criteria"
-      ? setButtonText("Search by Criteria")
-      : setButtonText("Search by Title");
+    buttonText !== "Criteria"
+      ? setButtonText("Criteria")
+      : setButtonText("Title");
   };
   console.log(searchMovie);
 
@@ -51,22 +51,25 @@ const Main = () => {
   }, [searchGenres, searchRating, language]);
   return (
     <div className="Main">
-      <div className="toolBar">
-        <button className="switchFormBtn" onClick={switchForm}>
-          {buttonText}
-        </button>
-        {!showCriteria ? (
-          <SearchForm setTerm={setSearchMovie} />
-        ) : (
-          <CriteriaForm
-            chooseGenre={setSearchGenres}
-            chooseRating={setSearchRating}
-            chooseLanguage={setLanguage}
-          />
-        )}
+      <div className="toolbarContainer">
+        <div className="toolBar">
+          <button className="switchFormBtn" onClick={switchForm}>
+            {buttonText}
+          </button>
+          {!showCriteria ? (
+            <SearchForm setTerm={setSearchMovie} />
+          ) : (
+            <CriteriaForm
+              chooseGenre={setSearchGenres}
+              chooseRating={setSearchRating}
+              chooseLanguage={setLanguage}
+            />
+          )}
+        </div>
       </div>
-      <ResultList movies={movies} />
-      <Favorites />
+      <section className="list">
+        <ResultList movies={movies} />
+      </section>
     </div>
   );
 };

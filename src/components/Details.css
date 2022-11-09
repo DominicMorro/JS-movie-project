@@ -1,3 +1,10 @@
 .Details {
-  padding: 10px;
+  height: 73em;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Details {
 }

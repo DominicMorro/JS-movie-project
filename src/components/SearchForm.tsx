@@ -19,7 +19,7 @@ const SearchForm = ({ setTerm }: Props) => {
         value={searchTerm}
         onChange={(e) => setSerachTerm(e.target.value)}
       />
-      <button>search</button>
+      <button>Search</button>
     </form>
   );
 };

@@ -27,7 +27,6 @@ const Details = () => {
       ) : (
         <p className="pageLoading">loading...</p>
       )}
-      <p className="movieOverview">{movie?.overview}</p>
     </div>
   );
 };
