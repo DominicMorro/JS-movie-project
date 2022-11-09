@@ -31,7 +31,7 @@ const Results = ({ oneMovie }: Props) => {
               addFavorite(oneMovie);
             }}
           >
-            &hearts;
+            Add to Favorites &hearts;
           </button>
         ) : (
           <button
