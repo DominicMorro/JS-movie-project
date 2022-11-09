@@ -15,3 +15,7 @@
 .CriteriaForm .red {
   color: red;
 }
+
+.CriteriaForm .genre .rating {
+  font-size: 50px;
+}

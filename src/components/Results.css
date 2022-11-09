@@ -14,6 +14,7 @@
 .Results .movieTemplate h3 {
   font-size: 30px;
   text-align: center;
+  position: relative;
 }
 
 .Results .movieTemplate p {
@@ -26,8 +27,24 @@
   background-color: white;
   font-size: 20px;
   font-family: "Bebas Neue", cursive;
+  border-radius: 10px;
 }
 
 .Results img {
   border-radius: 15px;
+}
+
+.Results .progressBar {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  bottom: 750px;
+  left: 10px;
+  /* background-color: black;
+  border-radius: 50%; */
+}
+
+.Results .poster-percentage {
+  position: relative;
+  height: 750px;
 }

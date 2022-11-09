@@ -14,7 +14,14 @@ const Details = () => {
   }, [id]);
 
   return (
-    <div className="Details">
+    <div
+      className="Details"
+      style={{
+        backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie?.backdrop_path})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
       {movie ? (
         <Results oneMovie={movie} />
       ) : (
