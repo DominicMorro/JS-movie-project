@@ -1,20 +1,55 @@
 .Details {
-  height: 73em;
   padding: 14px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.Details .recommended-movies-list {
+  height: 1066px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 48px,
+    black calc(100% - 48px),
+    transparent 100%
+  );
+  /* margin-bottom: 210px; */
+}
+.Details .recommended-movies-list::-webkit-scrollbar {
+  display: none;
+}
+
+.Details .recTitle {
+  font-size: 40px;
+  text-decoration: underline overline black;
+  margin: 0;
+  letter-spacing: 15px;
+}
+
+.Details .recommended {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.Details section {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-content: center;
+.selectedMovie {
+  margin-top: 80px;
 }
 
-.Details .recommended-movies-list {
-  height: 900px;
-  overflow: scroll;
-  margin-bottom: 210px;
+@media only screen and (min-width: 768px) {
+  .Details {
+    flex-direction: row;
+  }
+
+  .Details section {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+  }
 }

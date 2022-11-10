@@ -27,14 +27,15 @@ const Details = () => {
         backgroundSize: "cover",
       }}
     >
-      <section>
+      <section className="selectedMovie">
         {movie ? (
           <Results oneMovie={movie} />
         ) : (
           <p className="pageLoading">loading...</p>
         )}
       </section>
-      <section>
+      <section className="recommended">
+        <h3 className="recTitle">Recommended Films</h3>
         {recommendations ? (
           <ul className="recommended-movies-list">
             {recommendations.map((rec) => (
