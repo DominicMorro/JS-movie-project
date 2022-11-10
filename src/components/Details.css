@@ -6,5 +6,15 @@
   align-items: center;
 }
 
-.Details {
+.Details section {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-content: center;
+}
+
+.Details .recommended-movies-list {
+  height: 900px;
+  overflow: scroll;
+  margin-bottom: 210px;
 }

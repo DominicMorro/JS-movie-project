@@ -1,5 +1,6 @@
 import axios from "axios";
 import CriteriaResponse from "../models/CriteriaResponse";
+import RecommendedResponse from "../models/RecommendedResponse";
 import SearchMovieResponse from "../models/SearchMovieResponse";
 import SingleMovieResponse from "../models/SingularMovieResponse";
 import TrendingMovieResponse from "../models/TrendingMovieResponse";
@@ -44,6 +45,17 @@ export const getMovieByCriteria = (
         "vote_average.gte": average_vote,
         with_original_language: language,
       },
+    })
+    .then((res) => res.data)
+    .catch((error) => console.log(error));
+};
+
+export const getMovieRecommendations = (
+  id: string
+): Promise<RecommendedResponse> => {
+  return axios
+    .get(`https://api.themoviedb.org/3/movie/${id}/recommendations`, {
+      params: { api_key: apiKey },
     })
     .then((res) => res.data)
     .catch((error) => console.log(error));

@@ -8,4 +8,5 @@ export default interface Movie {
   language: number;
   genre_ids: number[];
   backdrop_path: string;
+  release_date: string;
 }

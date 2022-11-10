@@ -62,3 +62,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.Results .release-date {
+  position: relative;
+}

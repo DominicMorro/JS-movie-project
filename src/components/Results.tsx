@@ -22,6 +22,7 @@ const Results = ({ oneMovie }: Props) => {
       {oneMovie.original_title && (
         <li className="Results">
           <div className="movieTemplate">
+            <p className="release-date">{oneMovie.release_date.slice(0, 4)}</p>
             <div className="poster-percentage">
               <Link to={`/details/${oneMovie.id}`}>
                 <img
