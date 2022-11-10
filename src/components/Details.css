@@ -24,11 +24,14 @@
 }
 
 .Details .recTitle {
+  padding-left: 10px;
   font-size: 40px;
-  text-decoration: underline overline black;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
   margin: 0;
-  letter-spacing: 15px;
-  backdrop-filter: blur(100px);
+  letter-spacing: 16.4px;
+  backdrop-filter: blur(10px) saturate(12);
+  text-shadow: 2px 2px white;
 }
 
 .Details .recommended {
