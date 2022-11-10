@@ -18,6 +18,10 @@ p {
   border: 1px solid black;
 }
 
+.Main .switchFormBtn:hover {
+  background-color: white;
+}
+
 .Main .toolBar {
   width: 80%;
   border-width: 2px 0px 2px 0px;

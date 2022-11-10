@@ -32,6 +32,12 @@
   border-radius: 10px;
 }
 
+.Results .movieTemplate button:hover {
+  border: 3px solid #700b97;
+  background-color: black;
+  color: white;
+}
+
 .Results img {
   border-radius: 15px;
   background-size: contain;

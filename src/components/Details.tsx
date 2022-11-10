@@ -6,7 +6,6 @@ import {
   getSingleMovie,
 } from "../services/movieApiService";
 import "./Details.css";
-import RecommendedMovies from "./RecommendedMovies";
 import Results from "./Results";
 
 const Details = () => {

@@ -15,6 +15,14 @@ const Results = ({ oneMovie }: Props) => {
   const { addFavorite, isFav, deleteFavorite } = useContext(FavoritesContext);
   console.log(oneMovie.poster_path);
   let percentage = (oneMovie.vote_average * 10).toFixed(0);
+  let color = "";
+  if (+percentage >= 70) {
+    color = "#54B435";
+  } else if (+percentage < 70 && +percentage >= 50) {
+    color = "#fcc603";
+  } else {
+    color = "#f70b07";
+  }
   let id: string | undefined = useParams().id;
 
   return (
@@ -31,6 +39,7 @@ const Results = ({ oneMovie }: Props) => {
                   alt={oneMovie.original_title}
                 />
               </Link>
+
               <div className="progressBar">
                 <CircularProgressbar
                   className="movieRating"
@@ -39,7 +48,7 @@ const Results = ({ oneMovie }: Props) => {
                   value={+percentage}
                   text={`${percentage}%`}
                   styles={buildStyles({
-                    pathColor: "#54B435",
+                    pathColor: color,
                     textColor: "#ffffff",
                     trailColor: "#C0C0C0",
                     backgroundColor: "#000000",

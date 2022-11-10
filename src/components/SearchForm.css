@@ -10,6 +10,10 @@
   border: 1px solid black;
 }
 
+.SearchForm button:hover {
+  background-color: white;
+}
+
 .SearchForm input {
   border-radius: 50px;
   padding: 5px;
